@@ -17,7 +17,7 @@
     border: 1px solid #fff;
     width: 900px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .links {
     border: 1px solid #fff;
@@ -43,34 +43,30 @@
     align-items: center;
   }
 
-  .photo-grid-container { /*lay out a carousel containing each image as a carousel_item 
-                          Add a previous and next button to the start and end of that container block*/
-    display: flex;
-    justify-content: center;
+  .photo-grid-container { 
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    
   }
 
-  .carousel{
-      overflow: hidden;
-      max-width: 600px;
-      position: relative;
-  }
-
-  .carousel .carousel__item,
-  .carousel .carousel__item--hidden{
+  .photo-grid-container .carousel__item,
+  .photo-grid-container .carousel__item--hidden{
       display: none;
   }
 
-  .carousel .carousel__item img {
+  .photo-grid-container .carousel__item {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     height:auto;
+    
   }
 
-  .carousel .carousel__item--visible{
+  .photo-grid-container .carousel__item--visible{
       display: block;
   }
 
-  .carousel .carousel__actions{
+  .photo-grid-container .carousel__actions{
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -79,8 +75,8 @@
       transform: translateY(-50%);
   }
 
-  .carousel .carousel__actions button{
-      border-radius: 50px;
+  .photo-grid-container .carousel__actions button{
+      border-radius: 10;
       border: 0;
       font-weight: bold;
       cursor: pointer;
@@ -88,11 +84,11 @@
       height: 40px;
   }
 
-  .carousel .carousel__actions button#carousel__button--prev{
+  .photo-grid-container .carousel__actions button#carousel__button--prev{
       margin-left: 20px;
   }
 
-  .carousel .carousel__actions button#carousel__button--next{
+  .photo-grid-container .carousel__actions button#carousel__button--next{
     margin-right: 20px;
   }
   

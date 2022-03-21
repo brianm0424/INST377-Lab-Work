@@ -1,15 +1,15 @@
 let slidePosition = 0;
-const slides = document.querySelectorAll('carousel__item');
+const slides = document.querySelectorAll('.carousel__item');
 const totalSlides = slides.length;
 
-document
-  .querySelector('carousel__button--next')
+document.
+  querySelector('#carousel__button--next')
   .addEventListener('click', function() {
     moveToNextSlide();
   });
 
-document
-  .querySelector('carousel__button--prev')
+document.
+  querySelector('#carousel__button--prev')
   .addEventListener('click', function() {
     moveToPrevSlide();
   });
@@ -19,9 +19,10 @@ function updateSlidePosition() {
     slide.classList.remove('carousel__item--visible');
     slide.classList.add('carousel__item--hidden');
   }
+  slides[slidePosition].classList.add('carousel__item--visible');
 }
 
-slides[slidePosition].classList.add('carousel__item--visible');
+
 
 function moveToNextSlide() {
   if (slidePosition === totalSlides - 1) {
