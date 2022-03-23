@@ -1,5 +1,17 @@
 function dataHandler(arrayVar) {
-  console.table(arrayVar); // this is called "dot notation"
+  const resturantList = document.querySelector('.resto-list');
+  resturantList.innerHTML = ""
+  const listRange = [...Array(15).keys()];
+  const finalList = listRange.map(() => {
+    const randNum = Math.floor(Math.random() * arrayVar.length);
+    return arrayVar[randNum];
+  });
+ 
+  finalList.forEach((element) => {
+    const inject = `<li>${element.name}</li>`;
+    resturantList.innerHTML += inject;
+  });
+
 }
 
 
@@ -20,7 +32,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
     });
-    dataHandler(arrayFromJson);
+    dataHandler(arrayFromJson.data);
   }
 }
 
