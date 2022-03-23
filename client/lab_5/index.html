@@ -9,6 +9,44 @@
   </head>
 
   <body>
+    <header class='lab5-header'>
+      <h1>Brian McMahon's Lab 5</h1>
+    </header>
+    
 
+    <form  method="get" class="form-row">
+      <div class="form-row">
+        <label for = 'first-name'>First Name</label>
+        <input id="first-name" name="first-name" type="text"/>
+      </div>
+      <div class="form-row">
+        <label for = 'food-pref'>Food Preference</label>
+        <input id="food-pref" name="food-pref" type="text"/>
+      </div>
+
+      <fieldset class='legacy-form-row'>
+        <legend>Vegan or Veggie?</legend>
+        <input id='veg-yes'
+               name='veg-veg'
+               type='radio'
+               value='yes-veg' />
+        <label for='veg-yes' class='radio-label'>Yes</label>
+        <input id='veg-no'
+               name='veg-veg'
+               type='radio'
+               value='no-veg' />
+        <label for='veg-no' class='radio-label'>No</label>
+      </fieldset>
+
+      <div class='form-row'>
+        <button>Submit</button>
+      </div>
+
+    </form>
+    <div class="form-row">
+      <h3>Something will go here later</h3>
+    </div>
+    
+    <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>

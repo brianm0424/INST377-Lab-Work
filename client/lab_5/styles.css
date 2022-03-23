@@ -10,6 +10,10 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   background-color: darkslategray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Page Layout */
@@ -24,4 +28,75 @@ body {
 .container {
   max-width: 960px;
   margin-top: 25px;
+} 
+
+.lab5-header {
+  text-align: left;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 25px;
+  
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+  
 }
+
+
+.form-row{
+  background-color: #F6F7F8;
+  border-radius: 25px;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+
+
+  .legacy-form-row {
+    border: none;
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+  
+  .legacy-form-row legend {
+    margin-bottom: 15px;
+  }
+  
+  .legacy-form-row .radio-label {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+  }
+  
+  .legacy-form-row input[type='radio'] {
+    margin-top: 2px;
+  }
+    
+  .legacy-form-row .radio-label,
+  .legacy-form-row input[type='radio'] {
+    float: left;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: #5995DA;
+  
+    border: none;
+    border-radius: 5px;
+  
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+  
+  .form-row button:hover {
+    background-color: #76AEED;
+  }
+  
+  .form-row button:active {
+    background-color: #407FC7;
+  }
