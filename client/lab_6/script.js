@@ -17,7 +17,7 @@ function dataHandler(arrayVar) {
 
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.form-row');
-  const submit = document.querySelector('.form-row button');
+  const submit = document.querySelector('.submit');
   submit.style.display = 'none';
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
@@ -31,8 +31,9 @@ async function mainEvent() { // the async keyword means we can make API requests
 
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
+      dataHandler(arrayFromJson.data);
     });
-    dataHandler(arrayFromJson.data);
+    
   }
 }
 
