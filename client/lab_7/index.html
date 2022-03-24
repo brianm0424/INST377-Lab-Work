@@ -3,11 +3,42 @@
 
   <head>
     <meta charset="UTF-8"/>
-    <title>Brian McMahon Lab 7: </title>
+    <title>Brian McMahon Lab 7: Filtering Data With A Typeahead Form Input</title>
     <link rel='stylesheet' href='styles.css'/>
   </head>
 
   <body>
-    currently catching back up
+    <header class='lab5-header'>
+      <h1>Brian McMahon's Lab 7</h1>
+    </header>
+    
+    <div class="row">
+      <div class="col">
+        <form  method="get" class="form-row">
+          <div class="form-row">
+            <label for = 'resto_name'>Resturant Name</label>
+            <input id="resto_name" name="resto_name" type="text"/>
+
+          </div>
+          <div class="form-row">
+            <label for = 'zipcode'>Zipcode</label>
+            <input id="zipcode" name="zipcode" type="text"/>
+    
+
+          <div class='form-row'>
+            <button class="submit">Change Resturants</button>
+          </div>
+        
+        </form>
+      </div>
+    
+      <div class="col">
+        <div class="form-row">
+          <ul class="resto-list"></ul>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>
